@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Byte</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/main-mobile.css'%}"/>
+</head>
+
+<body>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <script src="{% static 'assets/js/lib/jquery.js'%}"></script>
+    
+    <div class="preloader" id="preloader">
+      <div class="loader">
+          <span id="load_percent"></span>
+      </div>
+    </div>
+  
+  <div class="mainMenu" id="mainMenu">
+    <button class="c-hamburger c-hamburger-line" id="showMenu">
+      <span></span>
+    </button>
+    
+    <a href="{% url 'index' %}" class="myTitle">BYTE</a>
+    
+    <form name="searchForm" action="{% url 'search' %}" method="get" class="form-inline form-search">
+         <div class="input-goup">
+             <i class="glyphicon glyphicon-search"></i>
+             <i class="glyphicon glyphicon-triangle-bottom"></i>
+             <input class="form-control" id="searchInput" type="text" name="search" placeholder="search">
+         </div>
+     </form>
+     <br><br>
+    <div>
+        
+      <ul class="myMenu">
+        {% for language in languages %}
+          {% if language.parent == NONE %}
+            <li class="menuList">
+              <a href="{% url 'language' language.name %}">
+                {% if language.icon != NONE %}
+                {{language.icon|safe}} 
+                {% endif %}
+                {{language.name}}</a>
+              <ul class="menuDrop">
+                {% for child in languages %}
+                  {% if child.parent.id == language.id %}
+                      <a href="{% url 'language' child.name %}">
+                          {% if child.icon != NONE %}
+                          {{child.icon|safe}}
+                          {% endif %}
+                         {{child.name}}</a>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="myWrap">
+      {% block content %}
+      {% endblock %}
+  </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'assets/js/function.js'%}"></script>
+    <script src="{% static 'assets/js/preloader.js'%}"></script>
+</body>
+</html>

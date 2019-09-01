@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Directory</title>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main-mobile.css"/>
+</head>
+
+<body>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <script src="assets/js/lib/jquery.js"></script>
+    
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span id="load_percent"></span>
+        </div>
+      </div>
+    
+    <div class="mainMenu" id="mainMenu">
+      <button class="c-hamburger c-hamburger-line" id="showMenu">
+        <span></span>
+      </button>
+      <a href="#" class="myTitle">Law</a>
+      
+     <form name="serch" action="#" method="get" class="form-inline form-search">
+          <div class="input-goup">
+            <!--
+              <i class="glyphicon glyphicon-search"></i>
+              <i class="glyphicon glyphicon-triangle-bottom"></i>
+            -->
+              <input class="form-control" id="searchInput" type="text" name="search" placeholder="search">
+          </div>
+      </form>
+      <div>
+        <ul class="myMenu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Регистрация</a></li>
+          <li><a href="#">Вход</a></li>
+        </ul>
+        <br><br>
+          <ul class="myMenu">
+              <li class="menuList"><a href="#">Категория 1</a>
+                <ul class="menuDrop">
+                    <li><a href="#">подкатегория 1</a></li>
+                    <li><a href="#">подкатегория 2</a></li>
+                    <li><a href="#">подкатегория 3</a></li>
+                </ul>
+              </li>
+              <li class="menuList"><a href="#">Категория 2</a>
+                <ul class="menuDrop">
+                  <li><a href="#">подкатегория 1</a></li>
+                  <li><a href="#">подкатегория 2</a></li>
+                  <li><a href="#">подкатегория 3</a></li>
+                </ul>
+              </li>
+              <li class="menuList"><a href="#">Категория 3</a>
+                <ul class="menuDrop">
+                  <li><a href="#">подкатегория 1</a></li>
+                  <li><a href="#">подкатегория 2</a></li>
+                </ul>
+              </li>
+            <li><a href="#">Категория 4</a></li>
+            <li><a href="#">Категория 5</a></li>
+            <li><a href="#">Категория 6</a></li>
+          </ul>
+      </div>
+  </div>
+    <div class="myWrap">
+        <header class="myHeader" id="myHeader">
+            <h1 class="headerTitle">Law</h1>
+            <p>Law directory</p>
+            <button id="scrollHesader"><i class="fas fa-angle-down"></i></button>
+          </header>
+          <div class="content" id="content">
+              <br><br>
+              <div class="container">
+                  <ul class="nav nav-tabs" role="tablist">
+                      <li class="active"><a data-toggle="tab" role="tab" href="#html">Категория 1</a></li>
+                      <li><a data-toggle="tab" role="tab" href="#css">Категория 2</a></li>
+                      <li><a data-toggle="tab" role="tab" href="#php">Категория 3</a></li>
+                      <li><a data-toggle="tab" role="tab" href="#javascript">Категория 4</a></li>
+                      <li><a data-toggle="tab" role="tab" href="#python">Категория 5</a></li>
+                      <li><a data-toggle="tab" role="tab" href="#unity">Категория 6</a></li></ul>
+                     
+                    <div class="tab-content">
+                      <div role="tabpanel" id="html" class="tab-pane active">
+                        <h3>Категория 1</h3>
+                        <p>Список статей: </p>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <a href="#" class="tagLink">статья 1</a>
+                          </div>
+                          <div class="col-md-3">
+                            <a href="#" class="tagLink">статья 2</a>
+                          </div>
+                          <div class="col-md-3">
+                            <a href="#" class="tagLink">статья</a>
+                          </div>
+                          <div class="col-md-3">
+                            <a href="#" class="tagLink">статья 4</a>
+                          </div>
+                          <div class="col-md-3">
+                            <a href="#" class="tagLink">статья 5</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" id="css" class="tab-pane">
+                        <h3><i class="fab fa-css3-alt"></i> CSS 3</h3>
+                        <p>Список свойств: </p>
+                      </div>
+                      <div role="tabpanel" id="php" class="tab-pane">
+                          <h3>Категория 2</h3>
+                          <div id="accordionPHP" class="panel-group">
+                              <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                      <h4 class="panel-title"><a href="#php1" data-parent="#accordionPHP" data-toggle="collapse">Подкатегория 1</a></h4>
+                                  </div>
+                                  <div id="php1" class="panel-collapse collapse in">
+                                      <div class="panel-body">
+                                        <div class="row">
+                                          <div class="col-md-3">
+                                            <a href="#" class="tagLink">статья 1</a>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <a href="#" class="tagLink">статья 2</a>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <a href="#" class="tagLink">статья 3</a>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <a href="#" class="tagLink">статья 4</a>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <a href="#" class="tagLink">статья 5</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                
+                                <div class="panel-heading">
+                                  <h4 class="panel-title"><a href="#php2" data-parent="#accordionPHP" data-toggle="collapse">Подкатегория 2</a></h4>
+                              </div>
+                              <div id="php2" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <div class="row">
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">переменые</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">echo/print</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">if</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">include</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">section</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title"><a href="#php3" data-parent="#accordionPHP" data-toggle="collapse">Подкатегория 3</a></h4>
+                              </div>
+                              <div id="php3" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">переменые</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">echo/print</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">if</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">include</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">section</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div role="tabpanel" id="javascript" class="tab-pane">
+                        <h3><i class="fab fa-js"></i> JavaScript</h3>
+                        <div id="accordionJS" class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="#js1" data-parent="#accordionJS" data-toggle="collapse">Подкатегория 4</a></h4>
+                                </div>
+                                <div id="js1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                      <div class="row">
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">переменые</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">echo/print</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">if</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">include</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <a href="#" class="tagLink">section</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                              
+                              <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#js2" data-parent="#accordionJS" data-toggle="collapse">Подкатегория 5</a></h4>
+                            </div>
+                            <div id="js2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">переменые</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">echo/print</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">if</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">include</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">section</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#js3" data-parent="#accordionJS" data-toggle="collapse">Подкатегория 6</a></h4>
+                            </div>
+                            <div id="js3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">переменые</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">echo/print</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">if</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">include</a>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <a href="#" class="tagLink">section</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" id="python" class="tab-pane">
+                        <h3>Категория 5</h3>
+                        <p>Содержимое 5 панели...</p>
+                      </div>
+                      <div role="tabpanel" id="unity" class="tab-pane">
+                        <h3>Категория 6</h3>
+                        <p>Содержимое 6 панели...</p>
+                      </div>
+                    </div>
+              </div>
+          </div>
+    </div>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/preloader.js"></script>
+</body>
+</html>

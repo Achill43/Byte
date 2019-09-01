@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Directory</title>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main-mobile.css"/>
+</head>
+
+<body>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <script src="assets/js/lib/jquery.js"></script>
+    
+    <div class="preloader" id="preloader">
+      <div class="loader">
+          <span id="load_percent"></span>
+      </div>
+    </div>
+
+    <div class="myLogo">ProgramDirectory</div>
+    <div class="menuButton" id="showMenu">
+        Menu
+    </div>
+    <div class="content">
+        <div class="mainMenu" id="mainMenu">
+            <p class="myTitle">Program Directory</p>
+            
+           <form name="serch" action="#" method="get" class="form-inline form-search">
+                <div class="input-goup">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                    <input class="form-control" id="searchInput" type="text" name="search" placeholder="search">
+                </div>
+            </form>
+            <div>
+                <ul class="myMenu">
+                  <li><a href="#"><i class="fab fa-html5"></i> HTML 5</a></li>
+                  <li><a href="#"><i class="fab fa-css3-alt"></i> CSS 3</a></li>
+                  <li class="menuList"><a href="#"><i class="fab fa-php"></i> PHP</a>
+                    <ul class="menuDrop">
+                        <li><a href="#">базовое</a></li>
+                        <li><a href="#">Laravel</a></li>
+                        <li><a href="#">WordPress</a></li>
+                    </ul>
+                  </li>
+                  <li class="menuList"><a href="#"><i class="fab fa-js"></i> JavaScript</a>
+                    <ul class="menuDrop">
+                        <li><a href="#">базовое</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">React.js</a></li>
+                    </ul>
+                  </li>
+                  <li class="menuList"><a href="#"><i class="fab fa-python"></i> Python</a>
+                    <ul class="menuDrop">
+                        <li><a href="#">базовое</a></li>
+                        <li><a href="#">Djando</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#"><img src="assets/img/unity.png" alt="" width="15px">  Unity 5</a></li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+<div class="description">
+
+</div>
+<div class="row">
+<div class="myCode col-md-6">
+<code>
+
+</code>
+</div>
+<div class="result col-md-6">
+
+</div>
+</div>
+            <div class="description">
+                <p class="comand"><code><span class="blue">clear</span>: right;</code></p>
+                <p>Элемент, который идет после элемента с float: right; будет перемещен на новую строку</p>
+                <p class="comand"><code> <span class="blue">&lt;forHTML&gt;</span>bla bla bla<span class="blue">&lt;/forHTML&gt;</span></code></p>
+                <p>для JavaScript, PHP, Python:</p>
+                <p class="comand"><code><pre><span class="blue">function</span> sayHiBye(firstName, lastName) {
+  <span class="green">// функция-помощник, которую мы используем ниже</span>
+  <span class="blue">function</span> getFullName() {
+    <span class="blue">return</span> firstName + <span class="red">" "</span> + lastName;
+  }
+
+  alert( <span class="red">"Hello, "</span> + getFullName() );
+  alert( <spa class="red">"Bye, "</spa> + getFullName() );
+}</pre></code></p>
+            </div>
+            <div class="myCode">
+                 
+            </div>
+        </div><!-- .container  -->
+    </div>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/preloader.js"></script>
+</body>
+</html>

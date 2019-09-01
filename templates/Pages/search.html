@@ -1,0 +1,86 @@
+{% extends "Pages/layouts.html" %}
+   
+{% block content %}
+<div class="content" id="content">
+    <br><br>
+    
+    <div class="container">
+        <div class="row">
+            <h3>{{myString}}</h3>
+        </div>
+      <div class="row">
+          <ul class="nav nav-tabs" role="tablist">
+            {% for language in languages %}
+              {% if language.parent == NONE %}
+                <li 
+                {% if language.name == "HTML 5" %}
+                class="active"
+                {% endif %}>
+                  <a href="#{{language.id}}" data-toggle="tab" role="tab">
+                    {% if language.icon != NONE %}
+                    {{language.icon|safe}} 
+                    {% endif %}
+                    {{language.name}}</a>
+                </li>
+              {% endif %}
+          {% endfor %}
+          </ul>
+          
+          <div class="tab-content">
+              {% for language in languages %}
+                  {% if language.parent == NONE %}
+                    <div role="tabpanel" id="{{language.id}}" 
+                    {% if language.name == "HTML 5" %}
+                    class="tab-pane active"
+                    {% else %}
+                    class="tab-pane"
+                    {% endif %}
+                    >
+                        <h3>
+                        {% if language.icon != NONE %}
+                        {{language.icon|safe}} 
+                        {% endif %}
+                        {{language.name}}</h3>
+                        <p>{{language.intro}} </p>
+                        <div class="row">
+                            {% for post in posts %}
+                              {% if post.prortamLanguage.name == language.name %}
+                                <div class="col-md-3">
+                                  <a href="{% url 'post' post.id %}" class="tagLink">{{post.name}}</a>
+                                </div>
+                              {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="row">
+                            {% for child in languages %}
+                              {% if child.parent.id == language.id %}
+                              <div id="accordion{{language.id}}" class="panel-group">
+                                  <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                          <h4 class="panel-title"><a href="#{{child.id}}" data-parent="#accordion{{language.id}}" data-toggle="collapse">{{child.name}}</a></h4>
+                                      </div>
+                                      <div id="{{child.id}}" class="panel-collapse collapse">
+                                          <div class="panel-body">
+                                            <div class="row">
+                                                {% for post in posts %}
+                                                  {% if post.prortamLanguage.name == child.name %}
+                                                    <div class="col-md-3">
+                                                      <a href="{% url 'post' post.id %}" class="tagLink">{{post.name}}</a>
+                                                    </div>
+                                                  {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                      </div>
+                  {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+    </div>
+{% endblock %}

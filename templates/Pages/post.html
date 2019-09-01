@@ -1,0 +1,54 @@
+{% extends "Pages/layouts.html" %}
+   
+{% block content %}
+<div class="content" id="content">
+    {% load staticfiles %}
+    <br><br>
+    <div class="container">
+    <div class="description">
+        <h1>
+            {% if post.prortamLanguage.name == "HTML 5" %}
+                Тег
+            {% endif %}
+            {% if post.prortamLanguage.name == "CSS 3" %}
+                Свойства
+            {% endif %}
+            {{post.name}}</h1>
+            {{post.description|safe}}
+    </div>
+        <div class="row">
+                {% if post.code != "none" %}
+                <div class="myCode col-md-6">
+                    <p class="comand">
+                        <code>{{post.code|safe}}</code>
+                    </p>
+                </div>
+                {% endif %}
+                {% if post.result != "none" %}
+                <div class="result col-md-6">
+                    <div class="comand">Результат</div>
+                    {{post.result|safe}}
+                </div>
+                {% endif %}
+        </div>
+        <div class="description">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        {% for brouser in brousers %}
+                        <th class="danger">{{brouser.brouser.name}}</th>
+                        {% endfor %}
+                    </thead>
+                    <tbody>
+                            <tr>
+                                {% for brouser in brousers %}
+                                <td>{{brouser.support}}</td>
+                                {% endfor %}
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
